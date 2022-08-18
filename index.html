@@ -1,0 +1,28 @@
+<head>
+  <script type='text/javascript' src='script.js'></script>	
+  <style>
+    :root {
+      --w: 500px;
+      --h: calc(var(--w) * 1.732/2);
+    }
+    #box {
+      width: var(--w);
+      height: var(--h);
+      //background-color: green;
+    }
+   #tri {
+			width: 0; 
+			height: 0; 
+			border-left: calc(var(--w) / 2) solid transparent;
+			border-right: calc(var(--w) / 2) solid transparent;
+			border-bottom: var(--h) solid green;
+		}
+ 
+  </style>
+</head>
+<body>
+ <div id='box'> 
+	<div id='tri'></div>
+ </div>
+ <div id='out'></div>
+</body>

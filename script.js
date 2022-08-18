@@ -1,0 +1,25 @@
+
+function printMousePos(event) {
+  x = event.clientX - 10;
+  y = event.clientY - 10;
+  w = 500;
+  h = 500 * Math.sqrt(3) / 2;
+  m = (h - y) / Math.sqrt(3);
+  a = 1 - (x + m) / w;
+  b = 1 - y/h;
+  c = 1 - (w - x + m) / w;
+  out.innerHTML =
+    "x: " + x + "<br>" +
+    "y: " + y + "<br>" +
+    "szeri lejdi: " + a + "<br>" +
+    "jomaha: " + b + "<br>" +
+    "siubidubi: " + c + "<br>";
+}
+
+function init() {
+  box = document.getElementById("box");
+  out = document.getElementById("out");
+  box.addEventListener("click", printMousePos, false);
+}
+
+window.onload = init;
